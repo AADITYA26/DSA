@@ -84,7 +84,7 @@ int Pair(){
     pair<int,int> p ={1,2}; //you dont need to import anything to use this
     cout<<p.first<<endl;
     cout<<p.second<<endl;
-    vector<pair<int,int>> vec = {(1,2),(3,4),(5,6)};
+    vector<pair<int,int>> vec = {{1,2},{3,4},{5,6}};
     vec.emplace_back(7,8);
     // vec.push_back({7,8});// need to create the pair to pass it
     return 0;
