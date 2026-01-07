@@ -9,7 +9,7 @@ class solution{
         }
         static int KadaneAlgorithm(vector<int>& nums){//dont add a negative number to the current sums
             int currentSum = 0;
-            int maxSum = INT_MIN;
+            int maxSum = INT32_MIN;
             for(int i = 0 ; i< nums.size() ; i++){
                 currentSum += nums.at(i);
                 maxSum = max(currentSum,maxSum);
