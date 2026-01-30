@@ -8,7 +8,7 @@ void getPerms(vector<int>& nums, int index,vector<vector<int>>&ans){//O(n!*n) ti
         ans.push_back(nums);
         return;
     }
-    for(int i = index ; i <nums.size() ; i++){//loop should be from index to end as the prioir combinations are already covered
+    for(int i = index ; i <nums.size() ; i++){//loop should be from index to end as the prior combinations are already covered
         swap(nums[i],nums[index]);//index swapped with element at i
         getPerms(nums,index+1,ans);
         swap(nums[i],nums[index]);//backtracking
