@@ -1,19 +1,19 @@
 #include <iostream>
 #include <vector>
-using namespace std;
-
+using namespace std;//There is one 3 part Quick Sort using Hoares Algorithm
+//Quick Sort using Lomuto algorithm.
 
 int partition(vector<int>& nums , int start , int end){
     int pivot = nums[end];
     int index = start-1;
-    for(int i =start ; i < end ; i++ ){
-        if(nums[i]<=pivot){
+    for(int i =start ; i < end ; i++ ){//elements less than the pivot should be on the left
+        if(nums[i]<=pivot){//elements create than the pivot on the right 
             index ++;
             swap(nums[index],nums[i]);
         }
     }
     index++;
-    swap(nums[index],nums[end]);
+    swap(nums[index],nums[end]);//index on the right position
     return index;
 }
 
