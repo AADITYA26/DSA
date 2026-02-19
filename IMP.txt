@@ -1,0 +1,15 @@
+Kadanes Algorithm
+Moores Voting Algorithm
+2 Pointer Approach (2Sum , 3 Sum , 4 Sum)
+Hashing(SubArray Sum , )
+Contains String Permutations
+All permuatations for a String
+Aggressive Cows
+Next Permutation
+Peak Index in A mounting Array
+NQueens
+Palindromic Partitioning
+Sudoku Solver
+
+
+#CONTAINS IMP QUESTIONS THAT I FEEL REQUIRE REVISION AFTER LINKED LIST
