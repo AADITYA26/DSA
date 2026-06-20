@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #include "BinarySearchTrees.cpp"
-#include <algorithm>
 using namespace std;
 
 Node * GenBSTPRE_nonOptimal(vector<int>& preOrder , int preStart , int preEnd){//Split Point Method O(n^2)
