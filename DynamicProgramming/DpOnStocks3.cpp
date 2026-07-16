@@ -37,9 +37,33 @@ int tabulation(vector<int> & stocks){
     return dp[0][1][2];
 }
 
+
+int optimal(vector<int> & stocks){
+    n = stocks.size();
+    vector<vector<int>> prev(2,vector<int>(3,0));
+    for(int i  = n-1 ; i >= 0 ; i--){
+        vector<vector<int>> curr(2,vector<int>(3,0));
+        for(int j = 0 ; j < 2 ; j++){
+            for(int left = 1 ; left < 3 ; left ++){
+                if(j){
+                    int bought = prev[0][left] - stocks[i];
+                    int notbought = prev[1][left];
+                    curr[j][left] = max(bought,notbought);
+                }
+                else{
+                    int sell = prev[1][left-1]+stocks[i];
+                    int notsell =prev[0][left];
+                    curr[j][left] = max(sell,notsell);
+                }
+            }
+        }
+        prev = curr;
+    }
+    return prev[1][2];
+}
 int main() {
     vector<int> stocks = {3, 3, 5, 0, 0, 3, 1, 4};
     n = stocks.size();
-    cout<<tabulation(stocks);
+    cout<<optimal(stocks);
     return 0;
 }
