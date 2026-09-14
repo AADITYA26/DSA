@@ -15,7 +15,7 @@ int MaxWidth(Node * root){
             auto x  = q.front();
             q.pop();
             if(x.first->left) q.push({x.first->left , 2*x.second+1});
-                if(x.first->right) q.push({x.first->right , 2*x.second+2});
+            if(x.first->right) q.push({x.first->right , 2*x.second+2});
         }
     }
     return maxWidth;

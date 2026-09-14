@@ -13,7 +13,7 @@ int booleanEvalTrue(string & s1 , int i , int j , bool isTrue){
         int OR = 0;
         int XOR = 0;
         int LT = booleanEvalTrue(s1,i,k-1,1);
-        int RT =  booleanEvalTrue(s1,k+1,j,1);
+        int RT = booleanEvalTrue(s1,k+1,j,1);
         int LF = booleanEvalTrue(s1,i,k-1,0);
         int RF = booleanEvalTrue(s1,k+1,j,0);
         if(isTrue){

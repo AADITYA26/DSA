@@ -16,11 +16,11 @@ int Search(vector<int> nums , int val){//using Binary Search algos , modified Bi
     while(start<=end){
         int mid = start +(end-start)/2;
         if(val == nums[mid])return mid;
-        if(nums[0]<nums[mid]){//Left Sorted 
+        if(nums[start]<nums[mid]){//Left Sorted 
             if(nums[start]<=val&&nums[mid]>=val){//Checking if value on right side 
                 end = mid -1;
             }
-            else start =mid;//if Value not found on right then moving to left
+            else start =mid+1;//if Value not found on right then moving to left
         }
         else {//Right Sorted
                 if(nums[mid]<=val&&nums[end]>=val){//Checking if value is in right side

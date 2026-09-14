@@ -59,7 +59,7 @@ int optimal(vector<int>& vals ,vector<int> & wts  , int wt ){
             int nottake  = prev[cap];
             int take = -1e9;
             if(wts[index]<=cap)take = vals[index] + prev[cap-wts[index]];
-            curr[cap] = max(nottake,take);
+                curr[cap] = max(nottake,take);
         }
         prev = curr;
     }

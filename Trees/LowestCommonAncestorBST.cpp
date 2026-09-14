@@ -4,7 +4,7 @@ using namespace std;
 
 Node * LowestCommonAncestor(Node * root , Node * p , Node * q){
     if(root == NULL) return NULL;
-    if(root == p || root == q) return root==q?q:p;
+    if(root == p || root == q) return root;
     if(p->data < root->data && q->data < root->data) return LowestCommonAncestor(root->left , p ,q);
     else if (p->data > root->data && q->data > root->data) return LowestCommonAncestor(root->right , p ,q);
     else return root;

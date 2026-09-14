@@ -29,7 +29,7 @@ void NQueens(vector<vector<char>>& board , int row , int n , vector<vector<vecto
 }
 
 int main(){
-    int n = 5;
+    int n = 4;
     vector<vector<char>> board(n,vector<char>(n,'.')) ;
     vector<vector<vector<char>>> ans;
     NQueens(board , 0 , n , ans);

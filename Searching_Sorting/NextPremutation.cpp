@@ -25,7 +25,6 @@ void nextPemutation(vector<int>& nums){
     while(i<=j){//revesering the array after
         swap(nums[i++],nums[j--]);
     }
-
 }
 
 int main(){

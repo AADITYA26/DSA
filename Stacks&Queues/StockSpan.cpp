@@ -10,12 +10,12 @@ vector<int> calaculateStockSpan(vector<int> StockPrices){
         return ans;
     }
     for(int i = 1 ; i<StockPrices.size() ; i++){
-            while(!temp.empty()&&StockPrices[i]>=StockPrices[temp.top()]){
+        while(!temp.empty()&&StockPrices[i]>=StockPrices[temp.top()]){
                 temp.pop();
-            }
-            if(temp.empty())ans.push_back(i+1);
-            else ans.push_back(i-temp.top());
-            temp.push(i);//storing for finding the previous highs of the array elements
+        }
+        if(temp.empty())ans.push_back(i+1);
+        else ans.push_back(i-temp.top());
+        temp.push(i);//storing for finding the previous highs of the array elements
     }
     return ans;
 }

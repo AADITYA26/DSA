@@ -21,7 +21,7 @@ void kthLargest(Node * root ,  int &k){
         cout<<root->data<<endl;
         return;
     }
-    kthLargest(root->right , k);
+    kthLargest(root->left , k);
 }
 
 int main(){
